@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>鼠标移入移出改变样式</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<style type="text/css">
+	.box{
+		width: 180px;
+		height: 180px;
+		border: 10px solid black;
+		margin: 30px auto 0;
+		color: #fff;
+		background: black;
+	}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div class="box">
+			鼠标移入样式改变，移出样式还原
+		</div>
+	</div>
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+	$('.box').hover(
+		function  (argument) {
+			$(this).css({'background':'#e3e4e5','border':'10px solid pink'});
+			// $(this).addClass('box');
+		},function  (argument) {
+			// $(this).css(background,black,border,10px solid black)
+			$(this).css({'background':'black','border':'10px solid black'});
+			// $(this).removeClass('box');
+		}
+	);
+	</script>
+</body>
+</html>

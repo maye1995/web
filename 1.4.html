@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>循环变色</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<style type="text/css">
+	.wrap{
+		width: 500px;
+		margin: 0 auto;
+		text-align: center;
+		overflow: hidden;
+	}
+	#btn{
+		/* float: left; */
+		width: 100px;
+	}
+	.wrap div{
+		margin: 10px;
+		width: 100px;
+		height: 200px;
+		background: #e3e3ee;
+		float: left;
+
+	}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<button id="btn">将方块变色</button>
+	</div>
+<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+	$('#btn').toggle(function  () {
+		$('.wrap div').css('background','pink');
+		// for (var i = 0; i < $('.wrap div').length; i++) {
+		// 	// $('.wrap div[i]').width('120');
+		// 	// $('.wrap div[1]').width('120');
+		// 	$('.wrap div[i]').get(0).style.background='red';
+		// }
+	},function  () {
+		// 	for (var i = 0; i < $('.wrap div').length; i++) {
+		// 	// $('.wrap div[i]').css('background','pink');
+		// }
+		$('.wrap div').css('background','red');
+	})
+
+	$('.btn1').toggle(function (){
+	alert('第一次点击');
+	},function (){
+	alert('第二次点击');
+	},function (){
+	alert('第三次点击');
+})
+</script>
+</body>
+</html>
