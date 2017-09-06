@@ -5,8 +5,57 @@
 	<title>百度输入法</title>
 	<meta name="keywords" content="">
 	<meta name="description" content="">
+	<style type="text/css">
+	*{margin: 0;padding:0;list-style: none;}
+	.wrap{
+		width: 200px;
+		/* text-align: center; */
+		margin: 30px auto 0;
+	}
+	.wrap .btn{
+		cursor: pointer;
+	}
+	.wrap .box{
+		width: 60px;
+		margin-top: 10px;
+		border: 1px solid skyblue;
+		cursor: pointer;
+		display: block;
+	}
+	.box div::hover{
+		background: #333;
+		
+		/* cursor: pointer; */
+	}
+	#close{
+		border-top: 1px solid skyblue;
+		cursor: pointer;
+	}
+	</style>
 </head>
 <body>
-	
+	<div class="wrap">
+		<button class="btn">输入法</button>
+		<div class="box">
+			
+			<!-- <select name="" id=""></select> -->
+			<div>手写</div>
+			<div>拼音</div>
+			<div id="close">关闭</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+	$('.btn').click(function  (argument) {
+		
+		$('.box').toggle();
+		
+	})
+	$('#close').click(function  (argument) {
+		$('.box').hide(null);
+		// alert('21');
+	})
+
+	</script>
 </body>
 </html>
