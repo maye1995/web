@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>简易年历</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<style type="text/css">
+	*{margin: 0;padding:0;list-style: none;}
+	.wrap{
+		margin: 30px auto 0;
+		/* display: block; */
+		width: 250px;
+		height: 315px;
+		background: #ccc;
+		overflow: hidden;
+	}
+	#box{
+		width: 240px;
+		height: 300px;
+		margin: 5px;
+		
+	}
+	#list{
+		width:240px;
+		height: 220px;
+		
+	}
+	#list li{
+		background: #000;
+		color: #fff;
+		text-align: center;
+		width: 50px;
+		height: 65px;
+		float: left;
+		margin: 5px;
+		margin-top: 5px;
+	}
+	#list span{
+		font-weight: bold;
+		line-height: 30px;
+		text-align: center;
+		font-size: 20px;
+	}
+	#list .show{
+		background: #fff;
+		color: #000;
+	}
+	#holiday{
+		float: left;
+		width: 230px;
+		height: 70px;
+		border: 1px solid #fff;
+		margin: 5px;
+	}
+	#holiday li{
+		color: #666;
+		text-align: center;
+		height: 70px;
+		padding-top: 10px;
+		display: none;
+	}
+	#holiday p{
+		font-size: 14px;
+	}
+	#holiday .active{
+		display: block;
+	}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div id="box">
+			<ul id="list">
+				<li class="show">
+					<span>1</span>
+					<p>JAN</p>
+				</li>
+				<li>
+					<span>2</span>
+					<p>FER</p>
+				</li>
+				<li>
+					<span>3</span>
+					<p>MAR</p>
+				</li>
+				<li>
+					<span>4</span>
+					<p>APR</p>
+				</li>
+				<li>
+					<span>5</span>
+					<p>MAY</p>
+				</li>
+				<li>
+					<span>6</span>
+					<p>JUN</p>
+				</li>
+				<li>
+					<span>7</span>
+					<p>JUL</p>
+				</li>
+				<li>
+					<span>8</span>
+					<p>AUG</p>
+				</li>
+				<li>
+					<span>9</span>
+					<p>SEP</p>
+				</li>
+				<li>
+					<span>10</span>
+					<p>OCT</p>
+				</li>
+				<li>
+					<span>11</span>
+					<p>NOV</p>
+				</li>
+				<li>
+					<span>12</span>
+					<p>DEC</p>
+				</li>
+			</ul>
+			<div id="holiday">
+				<li class="active">
+					<h4>1月节日</h4>
+					<p>元旦：1月1日至3日放假三天</p>
+				</li>
+				<li id="active">
+					<h4>2月节日</h4>
+					<p>春节：2月2日至8日放假7天</p>
+				</li><li id="active">
+					<h4>3月节日</h4>
+					<p>妇女节：3月8日妇女节，与我无关。</p>
+				</li><li id="active">
+					<h4>4月节日</h4>
+					<p>清明节：4月3日至5日放假3天</p>
+				</li><li id="active">
+					<h4>5月节日</h4>
+					<p>劳动节：4月30日至5月2日放假3天。</p>
+				</li><li id="active">
+					<h4>6月节日</h4>
+					<p>
+端午节：6月4日至6日放假3天</p>
+				</li><li id="active">
+					<h4>7月节日</h4>
+					<p>小暑：7月7日小暑。不放假。</p>
+				</li><li id="active">
+					<h4>8月节日</h4>
+					<p>七夕节：8月6日七夕节。不放假。</p>
+				</li><li id="active">
+					<h4>9月节日</h4>
+					<p>中秋节：9月10日至12日放假3天。</p>
+				</li><li id="active">
+					<h4>10月节日</h4>
+					<p>国庆节：10月1日至7日放假7天。</p>
+				</li><li id="active">
+					<h4>11月节日</h4>
+					<p>立冬：11月8日立冬。不放假。</p>
+				</li>
+				</li><li id="active">
+					<h4>12月节日</h4>
+					<p>艾滋病日:12月1日
+废除奴隶制国际日:12月2日。</p>
+				</li>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+	// $('#list li').mouseenter(function  (argument) {
+	// 	$(this).css({'background':'#fff','color':'#000'});
+	// })
+	var box=document.getElementById('box');
+	var list=document.getElementById('list');
+	var lis=list.getElementsByTagName('li');
+	var holiday=document.getElementById('holiday');
+	var li2s=holiday.getElementsByTagName('li');
+	var prev =0;
+	for (var i = 0; i < lis.length; i++) {
+			lis[i].index=i;
+		lis[i].onmousemove=function  (argument) {
+			// console.log(this.index);
+			lis[prev].className='';
+			li2s[prev].className='';
+
+			this.className='show';
+			li2s[this.index].className='active';
+			prev=this.index;
+		}
+	};
+	</script>
+</body>
+</html>

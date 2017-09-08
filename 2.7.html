@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>简易选项卡</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<style type="text/css">
+	*{margin: 0;padding:0;list-style: none;}
+	.wrap{
+		width: 500px;
+		margin: 30px auto 0;
+		overflow: hidden;
+		border: 1px solid #000;
+	}
+	#header{
+		width: 500px;
+		height: 30px;
+		background: #000;
+	}
+	#header li{
+		float: left;
+		width: 80px;
+		color: #fff;
+		background: #000;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		cursor: pointer;
+	}
+	#header .show{
+		color: #000;
+		background: #666;
+	}
+	#box ul{
+		display: none;
+	}
+	#box .active{
+		display: block;
+	}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div id="header">
+			<li class="show">第一课</li>
+			<li>第二课</li>
+			<li>第三课</li>
+		</div>
+		<div id="box">
+			<ul class="active" >
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				
+			</ul>
+			<ul>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				
+			</ul>
+			<ul>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				<li>网页特效原理分析</li>
+				
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+	var show=document.getElementById('show');
+	var header=document.getElementById('header');
+	var lis=header.getElementsByTagName('li');
+	var uls=document.getElementsByTagName('ul');
+	var prevIndex=0;
+	console.log(uls.length);
+	for (var i = 0; i < lis.length; i++) {
+
+		lis[i].index=i;
+		// uls[i].index=i;
+		lis[i].onmousemove=function  () {
+			
+			lis[prevIndex].className='';
+			uls[prevIndex].className='';
+			this.className='show';
+			uls[this.index].className='active';
+			prevIndex=this.index;
+		}
+	};
+// 	for (var i = 0; i < h1s.length; i++) {
+// 	// 为每一个h1添加一个index属性
+// 	h1s[i].index=i;
+// 	h1s[i].onclick=function (){
+// 		// 清除上次选中元素的类名
+// 		h1s[prevIndex].className='';
+// 		lis[prevIndex].className='';
+// 		// 当前选中元素添加类名
+// 		this.className='active';
+// 		lis[this.index].className='show';
+// 		// 更新上一次的索引值
+// 		prevIndex=this.index;
+// 	}
+// };
+	</script>
+</body>
+</html>
