@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>复选框，全选框</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<style type="text/css">
+	*{margin: 0;padding:0;list-style: none;}
+	.wrap{
+		width: 500px;
+		height: 700px;
+		margin: 10px auto 0;
+		/* text-align: center; */
+		border: 1px solid black;
+	}
+	.box{
+		/* text-align: center; */
+		width: 200px;
+		margin: 0 150px;
+		background: #ccc;
+		height: 500px;
+		border: 1px solid red;
+		border-radius:3%;
+	}
+	.box #con{
+		width: 190px;
+		margin:5px;
+		height: 40px;
+		border-bottom: 1px solid #666;
+	}
+	.box #con input{
+		margin-top: 15px;
+		float: left;
+	}
+	.box #con h5{
+		margin-top: 12.5px;
+		margin-left: 9px;
+		float: left;
+	}
+	.box #con p{
+		float: left;
+		margin-top: 12px;
+		margin-left: 9px;
+		font-size: 14px;
+		color: darkblue;
+	}
+	#con2 p{
+		/* float: left; */
+	}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box">
+			<div id="con">
+				<input type="checkbox" id="all" name="" value="">
+				<h5>全选</h6>
+				<p>反选</p>
+			</div>
+			<div id="con2">
+				<input type="checkbox" name="" value="">
+				<p>选项（一）</p>
+				<input type="checkbox" name="" value="">
+				<p>选项（二）</p>
+				<input type="checkbox" name="" value="">
+				<p>选项（三）</p>
+				<input type="checkbox" name="" value="">
+				<p>选项（四）</p>
+				<input type="checkbox" name="" value="">
+				<p>选项（五）</p>
+				<input type="checkbox" name="" value="">
+				<p>选项（六）</p>
+			</div>
+		</div>
+		<p>1、切换全选/全不选文字；2、根据选中个数更新全选框状态；</p>
+	</div>
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script>
+	// alert('1');
+	if($('#all').prop('checked')){
+		alert('1');
+	}
+
+	/* console.log($('#all').is(':checked'));
+	alert($('#all').is(':checked')); */
+	/* if($('#all').is(':checked')){
+			console.log('1');
+		}else{
+
+		};
+	 */
+	</script>
+</body>
+</html>

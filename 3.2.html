@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>解析求和</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<style type="text/css">
+	*{margin: 0;padding:0;list-style: none;}
+	.box{
+		width: 230px;
+		height: 100px;
+		margin: 20px auto 0;
+		/* border: 1px solid black; */
+	}
+	.box input{
+		width: 50px;
+	}
+	.box #get{
+		width: 50px;
+	}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box">
+			<input type="text" id="num1" name="" value="">
+			+
+			<input type="text" id="num2" name="" value="">
+			=
+			<span>?</span>
+			<button id="get">求和</button>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+	$('#get').click(function  (argument) {
+		console.log(1);
+		console.log($('span').html());
+		var num=$('#num1').val()+$('#num2').val();
+		console.log(num);
+		// console.log($('#num1')+($('#num2')));
+		$('span').html($('#num1').val()+$('#num2').val());
+	})
+
+
+	</script>
+</body>
+</html>
