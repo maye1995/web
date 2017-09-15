@@ -7,8 +7,12 @@
 	<meta name="description" content="">
 	<style type="text/css">
 	*{margin: 0;padding:0;list-style: none;}
+	.wrap{
+		/* margin: 0 auto; */
+		text-align: center;
+	}
 	.box{
-		width: 230px;
+		/* width: 230px; */
 		height: 100px;
 		margin: 20px auto 0;
 		/* border: 1px solid black; */
@@ -16,9 +20,7 @@
 	.box input{
 		width: 50px;
 	}
-	.box #get{
-		width: 50px;
-	}
+	
 	</style>
 </head>
 <body>
@@ -36,12 +38,14 @@
 	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
 	<script type="text/javascript">
 	$('#get').click(function  (argument) {
-		console.log(1);
-		console.log($('span').html());
-		var num=$('#num1').val()+$('#num2').val();
-		console.log(num);
+		//console.log(1);
+		//console.log($('span').html());
+		var num=parseInt($('#num1').val())+parseInt($('#num2').val());
+		//console.log(num);
 		// console.log($('#num1')+($('#num2')));
-		$('span').html($('#num1').val()+$('#num2').val());
+
+		$('span').html(num);
+
 	})
 
 
