@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>SetTimeOut应用</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<style type="text/css">
+	*{margin: 0;padding:0;list-style: none;}
+	.wrap{
+		text-align: center;
+
+	}
+	.box{
+
+	}
+	#banner{
+		margin: 10px auto 0;
+		width: 910px;
+		height: 40px;
+		background: skyblue;
+		border-radius: 3.5%;
+		/* overflow: hidden; */
+		position: relative;
+	}
+	#title {
+		/* overflow: hidden; */
+
+	}
+	#banner2{}
+	#title li{
+		float: left;
+		width: 100px;
+		height: 30px;
+		margin-left: 10px;
+		margin-top: 4px;
+		border: 1px solid #fff;
+		border-radius: 3.5%;
+		line-height: 30px;
+
+	}
+	#title li:hover{
+		background: #ccc;
+		font-weight: bold;
+		cursor: pointer;
+	}
+	#hangye,#zhanzhang{
+		margin-top: 2px;
+		display: none;
+		width: 592px;
+		height: 27px;
+		border-radius: 2.5%;
+		border: 1px solid black;
+		border-left: none;
+		overflow: hidden;
+		position: absolute;
+		left: 120px;
+		top: 43px;
+	}
+	#hangye li,#zhanzhang li{
+		float: left;
+		width: 70px;
+		height: 25px;
+		line-height: 25px;
+		margin-left: 1.5px;
+		margin-right: 1.5px;
+		margin-top: 1px;
+		border-left: 1px solid #000;
+		color: #999;
+		font-size: 12px;
+		text-decoration: none;
+	}
+	#hangye li:hover{
+		text-decoration: underline;
+		
+		cursor: pointer;
+	}
+	#zhanzhang li:hover{
+		text-decoration: underline;
+		
+		cursor: pointer;
+	}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box">
+			<div id="banner">
+				<ul id="title">
+					<li>站长之家</li>
+					<li>行业资讯</li>
+					<li>站长在线</li>
+					<li>网站运营</li>
+					<li>设计在线</li>
+					<li>网络编程</li>
+					<li>联盟资讯</li>
+					<li>服务器</li>
+				</ul>
+				
+			
+				<div id="banner2">
+					<ul id="hangye">
+						<li>业界动态</li>
+						<li>收购融资</li>
+						<li>门户动态</li>
+						<li>搜索引擎</li>
+						<li>网络游戏</li>
+						<li>电子商务</li>
+						<li>网络传媒</li>
+						<li>厂商开发</li>
+					</ul>
+				</div>
+				<div id="banner3">
+					<ul id="zhanzhang">
+						<li>站长报道</li>
+						<li>好站推荐</li>
+						<li>站长聚会</li>
+						<li>站长访谈</li>
+						<li>站长茶馆</li>
+						<li>好站推荐</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript">
+	var banner=document.getElementById('banner');
+	var title=document.getElementById('title');
+	var lis=banner.getElementsByTagName('li');
+	var banner2=document.getElementById('banner2');
+	var hangye=document.getElementById('hangye');
+	var lis2=banner2.getElementsByTagName('li');
+	var ipt=document.getElementById('ipt');
+	var timer1;
+	lis[1].onmouseenter=function  (ev) {
+		
+		clearTimeout(timer1);
+		zhanzhang.style.display='none';
+
+
+		hangye.style.display='block';	
+	}
+	lis[1].onmouseleave=function  (argument) {
+		
+		clearTimeout(timer1);
+		timer1=setTimeout(function  (argument) {
+			hangye.style.display='none';
+		},200);
+	}
+	hangye.onmouseenter=function  (argument) {
+		clearTimeout(timer1);
+		zhanzhang.style.display='none';
+		hangye.style.display='block';
+	}
+	hangye.onmouseleave=function  (argument) {
+		clearTimeout(timer1);
+		hangye.style.display='none';
+	}
+
+	lis[2].onmouseenter=function  (ev) {
+		
+		clearTimeout(timer1);
+		hangye.style.display='none';
+		zhanzhang.style.display='block';	
+	}
+	lis[2].onmouseleave=function  (argument) {
+		
+		clearTimeout(timer1);
+		timer1=setTimeout(function  (argument) {
+			zhanzhang.style.display='none';
+		},200);
+	}
+	zhanzhang.onmouseenter=function  (argument) {
+		clearTimeout(timer1);
+		hangye.style.display='none';
+		zhanzhang.style.display='block';
+	}
+	zhanzhang.onmouseleave=function  (argument) {
+		clearTimeout(timer1);
+		zhanzhang.style.display='none';
+	}
+</script>
+</body>
+</html>

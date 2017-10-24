@@ -78,7 +78,7 @@
 			</div>
 			<div class="con2">
 				<ul id="list1">
-					<li class="method">c</li>
+					<li>c</li>
 					<li class="method">%</li>
 					<li class="method">÷</li>
 					<li class="method">x</li>
@@ -103,17 +103,33 @@
 	</div>
 	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
 	<script type="text/javascript">
-	var result=$('.con1 h1').html();
+	// var result=($('.con1 h1').val());
+	var result=0;
 	var h1 =document.getElementsByTagName('h1')[0];
-	h1.innerHTML="0";
+	// var result=parseInt($('.con1 h1').html());
+	// var result=parseInt($('.con1 h1').html());
+	h1.innerHTML=0;
+	var result=parseInt($('.con1 h1').html());
 	$('#list1 .num').click(function  (argument) {
-		// var result=$('.con1 h1').html();
-		// h1.innerHTML="0";
-		h1.innerHTML="";
-		console.log(result);
-		result=result+$(this).html();
+		console.log(typeof result);
+		console.log(typeof h1.innerHTML);
+
+		if ((typeof h1.innerHTML) =="number") {
+			
+		var result=parseInt($('.con1 h1').html());
+		
+		h1.innerHTML=" ";
+		
+		result=parseInt(result+$(this).html());
 		h1.innerHTML=result;
+		console.log(typeof result);
 		console.log(result);
+
+		}else{
+
+		};
+
+
 	})
 
 	$('#list1 .point').click(function  (argument) {
@@ -121,21 +137,33 @@
 		console.log(result);
 		result=0+$(this).html();
 		h1.innerHTML=result;
-		console.log(result);
+		// console.log(result);
 	})
 
 	//"c键功能定义"
 	$('#list1 li:first').click(function  (argument) {
 		// result=0;
+		var result=parseInt($('.con1 h1').html());
 		console.log(result);
-		// h1.innerHTML="";
+		h1.innerHTML="0";
 		// result=0;
-		h1.innerHTML=" ";
+		// h1.innerHTML=" ";
 		// h1.innerHTML="";
 		// $('.con1 h1').html('0');
-		result=0;
+		// result=0;
 		// result=result+$(this).html();
 		// h1.innerHTML=result;
+
+	})
+	//功能键定义
+	$('#list1 .method').click(function  (argument) {
+		
+		result=parseInt(h1.innerHTML);
+		h1.innerHTML=$(this).html();
+		$('p:first').html(result+h1.innerHTML);
+		console.log(result);
+		h1.innerHTML=$(this).html();
+		var result=parseInt($('p:first').html());
 
 	})
 	//"÷键功能定义"
