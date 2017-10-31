@@ -29,6 +29,7 @@
 			cursor: pointer;
 		}
 		#text{
+			font-size: 14px;
 			float: left;
 			width: 600px;
 			margin: 0,25px;
@@ -76,6 +77,30 @@
 		}
 		.con2 .banner p{
 			float: left;
+			background: #fff;
+			height: 35px;
+			width: 100px;
+			margin-top: 5px;
+			margin-left: 5px;
+			line-height: 35px;
+		}
+		.con2 #weibo li{
+			float: left;
+			margin: 5px ;
+			text-align: left;
+			border-bottom: 1px dashed #e5e4e5;
+			font-size: 14px;
+			width: 600px;
+			color: blue;
+		}
+		.con2 #weibo p{
+			float: right;
+			margin-right: 50px;
+			font-size: 10px;
+		}
+		.con2 #weibo p:hover{
+			color: orange;
+			cursor: pointer;
 		}
 	</style>
 </head>
@@ -91,9 +116,7 @@
 			</div>
 
 			<div class="body">
-				<textarea name="" id="text" cols="30" rows="10">
-						
-				</textarea>
+				<textarea name="" id="text" cols="30" rows="10"></textarea>
 			</div>
 
 				<div class="foot">
@@ -131,10 +154,38 @@
 			<div class="banner">
 				<p>大家都在说</p>
 			</div>
+			<ul id="weibo">
+				<!-- <li>sasffsd</li> -->
+				<!-- <p>删除</p> -->
+			</ul>
 		</div>
 		
 	</div>
-
+	<script type="text/javascript">
+	var wrap=document.getElementById('wrap');
+	var text=document.getElementById('text');
+	var weibo=document.getElementById('weibo');
+	var btn =document.getElementById('btn');
+	var del=weibo.getElementsByTagName('p');
+	btn.onclick=function fabu (argument) {
+		var connLi=document.createElement('li');
+		var del =document.createElement('p');
+		del.innerText='删除';
+		connLi.innerHTML=text.value;
+		if (text.value!='') {
+			weibo.appendChild(connLi);
+			weibo.appendChild(del);
+		}else{
+			alert('请至少输入点内容吧');
+		}
+		text.value='';
+		del.onclick=function shanchu (argument) {
+			weibo.removeChild(connLi);
+			weibo.removeChild(del);};
+		
+	}
+	
+	</script>
 
 </body>
 </html>
