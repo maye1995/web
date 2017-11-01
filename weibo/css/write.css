@@ -1,0 +1,138 @@
+	<style type="text/css">
+		*{margin: 0;padding:0;list-style: none;}
+		.wrap{
+			text-align: center;
+		}
+		.content{
+			width: 100vw;
+			height: 2000px;
+			background: url(../img/bg.jpg) ;
+			z-index: 0;
+		}
+		.mask{
+			margin: 0 auto;
+			z-index: 1;
+			width: 1010px;
+			background: rgba(0,0,0,0.4);
+			filter:Alpha(opacity=40);
+		}
+		.con{
+			z-index: 2;
+			/* margin:0 auto; */
+			margin-left: 145px;
+			padding-top: 6px;
+			background: #fff;
+			width: 600px;
+			overflow: hidden; 
+
+		}
+		.head1 img{
+			margin-top: 2px;
+			float: left;
+			margin-left: 10px;
+		}
+		.head1 span{
+			float: right;
+			color: red;
+			font-size: 14px;
+			line-height: 42px;
+			text-align: right;
+			margin-right: 10px;
+			cursor: pointer;
+		}
+		#text{
+			font-size: 14px;
+			float: left;
+			width: 580px;
+			margin-right: 10px;
+			margin-left: 10px;
+		}
+		#btn{
+			float: right;
+			width: 80px;
+			height: 30px;
+			margin-top: 8px;
+			margin-right: 10px;
+			background:url(../img/fabu.png);
+			cursor: pointer;
+		}
+		.foot li{
+			float: left;
+			overflow: hidden;
+			width: 70px;
+			margin-left: 10px;
+			cursor: pointer;
+			margin-top: 8px;
+
+		}
+		.foot li img{
+			float: left;
+		}
+		.foot li p{
+			float: left;
+			height: 30px;
+			font-size: 14px;
+			line-height: 23px;
+			margin-left: 5px;
+		}
+		.foot li p:hover{
+			color: orange;
+		}
+		.con2{
+			margin-top: 30px;
+			margin-left: 145px;
+			background: #fff;
+			width: 600px;
+			overflow: hidden;
+		}
+		.con2 .banner1{
+			background-color:#ffc09f;
+			width: 600px;
+			height: 40px;
+		}
+		.con2 .banner1 p{
+			float: left;
+			background: #fff;
+			height: 35px;
+			width: 100px;
+			margin-top: 5px;
+			margin-left: 5px;
+			line-height: 35px;
+		}
+		.con2 #weibo li{
+			float: left;
+			margin: 5px ;
+			text-align: left;
+			border-bottom: 1px dashed #e5e4e5;
+			font-size: 14px;
+			width: 600px;
+			color: blue;
+		}
+		.con2 #weibo p{
+			float: right;
+			margin-right: 50px;
+			font-size: 10px;
+		}
+		.con2 #weibo p:hover{
+			color: orange;
+			cursor: pointer;
+		}
+		.left{
+			position: fixed;
+			top: 70px;
+		}
+		.left ul li{
+			color: #fff;
+			line-height: 35px;
+			text-align: left;
+			padding-left: 20px;
+			font-size: 14px;
+			font-weight: bold;
+			width: 125px;
+		}
+		.left ul li:hover{
+			cursor: pointer;
+			background: rgba(0,0,0,0.6);
+			filter:Alpha(opacity=60);
+		}
+	</style>

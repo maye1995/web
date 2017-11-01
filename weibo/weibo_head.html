@@ -2,12 +2,11 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>微博头</title>
+	<title>仿新浪微博</title>
 	<meta name="keywords" content="">
 	<meta name="description" content="">
 	<style type="text/css">
 	*{margin: 0;padding:0;list-style: none;}
-	
 	.head{
 		margin: 0 auto;
 		width: 100vw;
@@ -15,64 +14,9 @@
 		background: #fff;
 		border-top: 2px solid orange;
 	}
-	
-	.banner {
-		width: 1260px;
-		height: 50px;
-		background: #fff;
-		margin: 0 auto;
-		display:flex;
-		align-items:center;
-	}
-	.banner p{
-		float: left;
-		margin-right: 30px;
-	}
-	.banner p img{
-		
-	}
-	.banner input{
-		width: 470px;
-		height: 30px;
-		background:  440px #eee;
-		border: 1px solid #ddd;
-		padding-left: 9px;
-	}
-	.banner input:focus{
-		border: 1px solid orange;
-		background:  440px #fff;
-		outline: none;
-	}
-	.search_logo{
-		position: absolute;
-		left: 740px;
-		
-	}
-	.search_logo:hover{
-		cursor: pointer;
-	}
-	.banner .home{
-		background: url(img/home.png) 0 0 no-repeat;
-		padding-left: 30px;
-	}
-	.banner .video{
-		background: url(img/video.png) 0 0 no-repeat;
-		padding-left: 30px;
-	}
-	.banner .found{
-		background: url(img/found.png) 0 0 no-repeat;
-		padding-left: 30px;
-	}
-	.banner .game{
-		background: url(img/game.png) 0 0 no-repeat;
-		padding-left: 30px;
-	}
-	.banner .personal{
-		background: url(img/personal.png) 0 0 no-repeat;
-		padding-left: 30px;
-	}
 	</style>
-
+	<link rel="stylesheet" href="css/head.css">
+	<link rel="stylesheet" href="css/write.css">
 </head>
 <body>
 	<div class="wrap">
@@ -89,6 +33,74 @@
 			</div>
 			
 		</div>
+		<div class="content">
+			<div class="mask">
+				<div class="left">
+					<ul class="tab">
+						<li>首页</li>
+						<li>我的收藏</li>
+						<li>我的赞</li>
+					</ul>
+				</div>
+				<div>
+					<ul><li>' '</li></ul>
+				</div>
+				<div class="con">
+
+					<div class="head1">
+						<img src="img/new.png" alt="新鲜事">
+						
+						<span>热门微博</span>
+						<span>十九大即将落幕</span>
+					</div>
+
+					<div class="body">
+						<textarea name="" id="text" cols="30" rows="6"></textarea>
+					</div>
+
+						<div class="foot">
+							<ul>
+								<li>
+									<img src="img/biaoqing.png" alt="">
+									<p>表情</p>
+								</li>
+								<li>
+									<img src="img/tupian.png" alt="">
+									<p>图片</p>
+								</li>
+								<li>
+									<img src="img/shipin.png" alt="">
+									<p>视频</p>
+								</li>
+								<li>
+									<img src="img/huati.png" alt="">
+									<p>话题</p>
+								</li>
+								<li>
+									<img src="img/toutiao.png" alt="">
+									<p>头条</p>
+								</li>
+								<li>
+									<img src="img/dengdeng.png" alt="">
+									
+								</li>
+							</ul>
+							<span id="btn"></span>
+						</div>
+						
+				</div>
+				<div class="con2">
+					<div class="banner1">
+						<p>大家都在说</p>
+					</div>
+					<ul id="weibo">
+						<!-- <li>sasffsd</li> -->
+						<!-- <p>删除</p> -->
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
+	<script type="text/javascript" src="js/weibo.js"></script>
 </body>
 </html>
