@@ -8,6 +8,7 @@
 			height: 2000px;
 			background: url(../img/bg.jpg) ;
 			z-index: 0;
+			padding-top: 50px;
 		}
 		.mask{
 			margin: 0 auto;

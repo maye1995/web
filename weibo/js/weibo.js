@@ -1,4 +1,4 @@
-var wrap=document.getElementById('wrap');
+	var wrap=document.getElementById('wrap');
 	var text=document.getElementById('text');
 	var weibo=document.getElementById('weibo');
 	var btn =document.getElementById('btn');

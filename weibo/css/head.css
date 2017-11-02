@@ -7,7 +7,6 @@
 		border-top: 2px solid orange;
 		text-align: center;
 	}
-	
 	.banner {
 		position: fixed;
 		padding-left: 180px;
@@ -21,7 +20,7 @@
 	}
 	.banner p{
 		float: left;
-		margin-right: 31px;
+		margin-right: 29.5px;
 	}
 	.banner p img{
 		
@@ -41,7 +40,7 @@
 	.search_logo{
 		position: absolute;
 		left: 740px;
-		
+		top: 8px;
 	}
 	.search_logo:hover{
 		cursor: pointer;
